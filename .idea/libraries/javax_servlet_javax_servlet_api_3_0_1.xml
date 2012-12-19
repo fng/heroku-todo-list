@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="javax.servlet_javax.servlet-api_3.0.1">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/javax.servlet/javax.servlet-api/jars/javax.servlet-api-3.0.1.jar!/" />
+      <root url="jar://C:/tools/play-2.0.4/repository/local/javax.servlet/javax.servlet-api/3.0.1/jars/javax.servlet-api.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

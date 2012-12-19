@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="javax.validation_validation-api_1.0.0.GA">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/javax.validation/validation-api/jars/validation-api-1.0.0.GA.jar!/" />
+      <root url="jar://C:/tools/play-2.0.4/repository/local/javax.validation/validation-api/1.0.0.GA/jars/validation-api.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />

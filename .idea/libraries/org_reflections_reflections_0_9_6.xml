@@ -1,7 +1,7 @@
 <component name="libraryTable">
   <library name="org.reflections_reflections_0.9.6">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.ivy2/cache/org.reflections/reflections/jars/reflections-0.9.6.jar!/" />
+      <root url="jar://C:/tools/play-2.0.4/repository/local/org.reflections/reflections/0.9.6/jars/reflections.jar!/" />
     </CLASSES>
     <JAVADOC />
     <SOURCES />
