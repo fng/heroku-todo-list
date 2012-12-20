@@ -32,8 +32,12 @@ object Application extends Controller {
   def addTask = Action(parse.json) {
     implicit request =>
       (request.body \ "label").asOpt[String].map{label =>
-        Task.create(label)
-        Ok("addTaskJson with label: " + label)
+        if(label.isEmpty || label.equals("")){
+          BadRequest("Label is required!")
+        }else{
+          Task.create(label)
+          Ok("addTaskJson with label: " + label)
+        }
       }.getOrElse{
         BadRequest("Missing parameter [label]")
       }

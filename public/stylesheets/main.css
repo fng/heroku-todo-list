@@ -1,0 +1,30 @@
+.muted {
+    color: #999999;
+}
+a.muted:hover {
+    color: #808080;
+}
+.text-warning {
+    color: #C09853;
+}
+a.text-warning:hover {
+    color: #A47E3C;
+}
+.text-error {
+    color: #B94A48;
+}
+a.text-error:hover {
+    color: #953B39;
+}
+.text-info {
+    color: #3A87AD;
+}
+a.text-info:hover {
+    color: #2D6987;
+}
+.text-success {
+    color: #468847;
+}
+a.text-success:hover {
+    color: #356635;
+}
