@@ -42,7 +42,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <span class="brand"><a href="@{routes.Application.index}">TODO List</a></span>
+                <span class="brand"><a href="@{routes.Tasks.index}">Tasks</a></span>
                 <div class="nav-collapse">
                     <ul class="nav">
                         <li><a wicket:id="servicesLink">Sub link 1</a></li>
@@ -51,7 +51,7 @@
                     </ul>
                 </div>
                 <div class="pull-right">
-                    <span class="help-block"><span wicket:id="version">(version)</span></span>
+                    <span class="help-block"><a href="@{routes.Application.logout()}">Logout</a></span>
                 </div>
                 <!--/.nav-collapse -->
             </div>

@@ -8,10 +8,16 @@
     <setting name="play2EnvVariables" value="" />
     <setting name="play2IsNonDefaultInstallDirUsed" value="true" />
     <setting name="play2NonDefaultInstallDir" value="C:\tools\play-2.0.4" />
+    <RunnerSettings RunnerId="Debug">
+      <option name="DEBUG_PORT" value="" />
+      <option name="TRANSPORT" value="0" />
+      <option name="LOCAL" value="true" />
+    </RunnerSettings>
     <RunnerSettings RunnerId="Play2AppRunner" />
     <RunnerSettings RunnerId="Profile ">
       <option name="myExternalizedOptions" value="&#13;&#10;additional-options2=onexit\=snapshot&#13;&#10;" />
     </RunnerSettings>
+    <ConfigurationWrapper RunnerId="Debug" />
     <ConfigurationWrapper RunnerId="Play2AppRunner" />
     <method>
       <option name="Make" enabled="false" />

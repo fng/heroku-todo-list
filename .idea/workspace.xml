@@ -1,25 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="15949acf-9df2-4cab-b95a-a9e68a43f43d" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/Tasks.scala" />
+    <list default="true" id="15949acf-9df2-4cab-b95a-a9e68a43f43d" name="Default" comment="move tasks specifics to the Tasks controller8">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/controllers/Secured.scala" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/app/views/login.scala.html" />
+      <change type="MOVED" beforePath="C:\code\fng\heroku\freezing-waterfall-4516\app\views\index.scala.html" afterPath="$PROJECT_DIR$/app/views/tasks.scala.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Application.scala" afterPath="$PROJECT_DIR$/app/controllers/Application.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/runConfigurations/Play2.xml" afterPath="$PROJECT_DIR$/.idea/runConfigurations/Play2.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/Tasks.scala" afterPath="$PROJECT_DIR$/app/controllers/Tasks.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/main.scala.html" afterPath="$PROJECT_DIR$/app/views/main.scala.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/conf/routes" afterPath="$PROJECT_DIR$/conf/routes" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/tasks.js" afterPath="$PROJECT_DIR$/public/javascripts/tasks.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="play-2.0-scala.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356011106394" ignored="false" />
-    <file path="/main.scala.html" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356008250303" ignored="false" />
+    <file path="/Dummy.txt" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356011483217" ignored="false" />
+    <file path="/main.scala.html" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356013827705" ignored="false" />
     <file path="$PROJECT_DIR$/../../../raptor/scratch/scratch.xml" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1355929920392" ignored="false" />
     <file path="/scratch.xml" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1355929891448" ignored="false" />
     <file path="/index.scala.html" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356010222229" ignored="false" />
-    <file path="/Application.scala" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356011224671" ignored="false" />
+    <file path="/Application.scala" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356014158820" ignored="false" />
     <file path="/tasks.js" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356010814522" ignored="false" />
-    <file path="/a.dummy" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356009302954" ignored="false" />
+    <file path="/a.dummy" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356013934130" ignored="false" />
     <file path="/fragment.java" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356011143430" ignored="false" />
-    <file path="/Tasks.scala" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356011432653" ignored="false" />
+    <file path="/Tasks.scala" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356012726913" ignored="false" />
+    <file path="/Secured.scala" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356013718329" ignored="false" />
+    <file path="/routes" changelist="15949acf-9df2-4cab-b95a-a9e68a43f43d" time="1356011918123" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +78,22 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <line_breakpoints>
+      <breakpoint url="file://$PROJECT_DIR$/app/controllers/Secured.scala" line="20" class="controllers.Secured" package="controllers">
+        <option name="ENABLED" value="true" />
+        <option name="LOG_ENABLED" value="false" />
+        <option name="LOG_EXPRESSION_ENABLED" value="false" />
+        <option name="SUSPEND_POLICY" value="SuspendAll" />
+        <option name="SUSPEND" value="true" />
+        <option name="COUNT_FILTER_ENABLED" value="false" />
+        <option name="COUNT_FILTER" value="0" />
+        <option name="CONDITION_ENABLED" value="true" />
+        <option name="CLASS_FILTERS_ENABLED" value="false" />
+        <option name="INSTANCE_FILTERS_ENABLED" value="false" />
+        <option name="CONDITION" value="" />
+        <option name="LOG_MESSAGE" value="" />
+      </breakpoint>
+    </line_breakpoints>
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -82,38 +104,13 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.scala.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
+      <file leaf-file-name="tasks.scala.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/tasks.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="93" selection-start="1030" selection-end="1030" vertical-scroll-proportion="-13.730769">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap-responsive.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap-responsive.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="328" column="4" selection-start="5918" selection-end="5918" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="bootstrap.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="40" column="18" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="main.css" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="1" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
-              <folding />
+            <state line="6" column="0" selection-start="74" selection-end="74" vertical-scroll-proportion="-3.9230769">
+              <folding>
+                <element signature="e#6#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -121,7 +118,7 @@
       <file leaf-file-name="main.scala.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="35" column="0" selection-start="1519" selection-end="1519" vertical-scroll-proportion="-7.3461537">
+            <state line="43" column="20" selection-start="1900" selection-end="1900" vertical-scroll-proportion="-4.576923">
               <folding />
             </state>
           </provider>
@@ -130,16 +127,65 @@
       <file leaf-file-name="Application.scala" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="21" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
+            <state line="8" column="49" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#21#42#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Controller.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/Controller.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="6" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.68">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="routes" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/conf/routes">
+      <file leaf-file-name="PlainResult.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/PlainResult.class">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+            <state line="8" column="6" selection-start="642" selection-end="642" vertical-scroll-proportion="-5.44">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="login.scala.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/views/login.scala.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="20" column="9" selection-start="414" selection-end="414" vertical-scroll-proportion="-13.076923">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Secured.scala" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/controllers/Secured.scala">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="34" column="11" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#21#38#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RequestHeader.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/RequestHeader.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="16" column="6" selection-start="923" selection-end="923" vertical-scroll-proportion="-9.32">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Security.class" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/Security.class">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="2" column="6" selection-start="93" selection-end="93" vertical-scroll-proportion="-1.36">
               <folding />
             </state>
           </provider>
@@ -148,29 +194,9 @@
       <file leaf-file-name="Tasks.scala" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/controllers/Tasks.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="35" selection-start="232" selection-end="232" vertical-scroll-proportion="0.33278957">
+            <state line="34" column="30" selection-start="808" selection-end="808" vertical-scroll-proportion="0.44376278">
               <folding>
                 <element signature="e#21#58#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="tasks.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/tasks.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="jquery.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/bootstrap/js/jquery.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding>
-                <element signature="n#!!doc" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -201,9 +227,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/models/Task.scala" />
-        <option value="$PROJECT_DIR$/Procfile" />
-        <option value="$PROJECT_DIR$/conf/application.conf" />
         <option value="$PROJECT_DIR$/app/views/twitterBootstrapInput.scala.html" />
         <option value="$PROJECT_DIR$/app/views/bootstrap2FieldConstructor.html" />
         <option value="$PROJECT_DIR$/app/views/helper/package.scala" />
@@ -211,11 +234,14 @@
         <option value="$PROJECT_DIR$/app/views/helper/bootstrap2/bootstrap2FieldConstructor.scala.html" />
         <option value="$PROJECT_DIR$/public/javascripts/taks.js" />
         <option value="$PROJECT_DIR$/public/stylesheets/main.css" />
-        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
-        <option value="$PROJECT_DIR$/app/views/index.scala.html" />
-        <option value="$PROJECT_DIR$/conf/routes" />
         <option value="$PROJECT_DIR$/public/javascripts/tasks.js" />
+        <option value="$PROJECT_DIR$/app/views/index.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/tasks.scala.html" />
+        <option value="$PROJECT_DIR$/conf/routes" />
+        <option value="$PROJECT_DIR$/app/views/login.scala.html" />
+        <option value="$PROJECT_DIR$/app/views/main.scala.html" />
         <option value="$PROJECT_DIR$/app/controllers/Application.scala" />
+        <option value="$PROJECT_DIR$/app/controllers/Secured.scala" />
         <option value="$PROJECT_DIR$/app/controllers/Tasks.scala" />
       </list>
     </option>
@@ -747,7 +773,11 @@
       <created>1356011106202</created>
       <updated>1356011106202</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="move tasks specifics to the Tasks controller">
+      <created>1356011462325</created>
+      <updated>1356011462325</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -761,7 +791,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="SBT Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.23173515" sideWeight="0.0" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.38812786" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
@@ -773,8 +803,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21636952" sideWeight="0.75342464" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24657534" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.14910859" sideWeight="0.61187214" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24657534" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -820,7 +850,7 @@
     <option name="MAXIMUM_HISTORY_ROWS" value="1000" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="input validation for the new task form" />
+    <option name="LAST_COMMIT_MESSAGE" value="move tasks specifics to the Tasks controller" />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="true" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -838,130 +868,126 @@
     <MESSAGE value="trying to enable bootstrap responsive" />
     <MESSAGE value="pure ajax page" />
     <MESSAGE value="input validation for the new task form" />
+    <MESSAGE value="move tasks specifics to the Tasks controller" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/conf/application.conf">
+    <entry file="file://$PROJECT_DIR$/target/scala-2.9.1/classes_managed/views/html/main.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="41" selection-start="880" selection-end="880" vertical-scroll-proportion="0.0">
+        <state line="1" column="7" selection-start="26" selection-end="26" vertical-scroll-proportion="-0.68">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/bootstrap/js/bootstrap-collapse.js">
+    <entry file="jar://C:/tools/play-2.0.4/repository/cache/scala_2.9.1/sbt_0.11.3/play/sbt-plugin/jars/sbt-plugin-2.0.2.jar!/sbt/PlayReloader.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bootstrap/js/bootstrap-datepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bootstrap/js/bootstrap-timepicker.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-            <marker date="1346166432587" expanded="false" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/jquery-1.7.1.min.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/tools/jdk1.6.0_25/src.zip!/java/lang/String.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="661" column="19" selection-start="23753" selection-end="23753" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bootstrap/js/jquery.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="n#!!doc" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap-responsive.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="328" column="4" selection-start="5918" selection-end="5918" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/bootstrap/css/bootstrap.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="18" selection-start="619" selection-end="619" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/stylesheets/main.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="1" selection-start="390" selection-end="390" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/index.scala.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="93" selection-start="1030" selection-end="1030" vertical-scroll-proportion="-13.730769">
+        <state line="17" column="0" selection-start="1045" selection-end="1045" vertical-scroll-proportion="-11.56">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/conf/routes">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="0" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0">
+        <state line="5" column="56" selection-start="159" selection-end="159" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/data/Mapping.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="6" selection-start="971" selection-end="971" vertical-scroll-proportion="-8.16">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/Action.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="13" selection-start="584" selection-end="584" vertical-scroll-proportion="-6.8">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/BodyParsers.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="8" selection-start="1294" selection-end="1294" vertical-scroll-proportion="-10.2">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/RequestHeader.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="6" selection-start="923" selection-end="923" vertical-scroll-proportion="-9.32">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/tasks.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="0" selection-start="74" selection-end="74" vertical-scroll-proportion="-3.9230769">
+          <folding>
+            <element signature="e#6#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/main.scala.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="35" column="0" selection-start="1519" selection-end="1519" vertical-scroll-proportion="-7.3461537">
+        <state line="43" column="20" selection-start="1900" selection-end="1900" vertical-scroll-proportion="-4.576923">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/tasks.js">
+    <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/Controller.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="0" selection-start="297" selection-end="297" vertical-scroll-proportion="0.0">
+        <state line="1" column="6" selection-start="27" selection-end="27" vertical-scroll-proportion="-0.68">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/PlainResult.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="6" selection-start="642" selection-end="642" vertical-scroll-proportion="-5.44">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/tools/play-2.0.4/repository/cache/play/play_2.9.1/jars/play_2.9.1-2.0.2.jar!/play/api/mvc/Security.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="2" column="6" selection-start="93" selection-end="93" vertical-scroll-proportion="-1.36">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/Secured.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="34" column="11" selection-start="851" selection-end="851" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/login.scala.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="20" column="9" selection-start="414" selection-end="414" vertical-scroll-proportion="-13.076923">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Application.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="21" selection-start="65" selection-end="65" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="8" column="49" selection-start="161" selection-end="161" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#21#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/Tasks.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="35" selection-start="232" selection-end="232" vertical-scroll-proportion="0.33278957">
+        <state line="34" column="30" selection-start="808" selection-end="808" vertical-scroll-proportion="0.44376278">
           <folding>
             <element signature="e#21#58#0" expanded="true" />
           </folding>

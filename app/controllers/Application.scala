@@ -1,13 +1,15 @@
 package controllers
 
 import play.api.mvc._
+import play.api.data._
+import play.api.data.Forms._
 
-object Application extends Controller {
+import views._
+
+object Application extends Controller with Secured{
 
 
-  def index = Action {
-    Ok(views.html.index())
-  }
+
 
 
   def javascriptRoutes = Action {
@@ -20,5 +22,39 @@ object Application extends Controller {
           routes.javascript.Tasks.deleteTask
         )
       ).as("text/javascript")
+  }
+
+
+  //Authentication
+  val loginForm = Form(
+    tuple(
+      "username" -> text,
+      "password" -> text
+    ) verifying("Invalid username or password", result => result match {
+      case (username, password) => check(username, password)
+    })
+  )
+
+  def check(username: String, password: String) = {
+    (username == "admin" && password == "admin")
+  }
+
+  def login = Action {
+    implicit request =>
+      username(request).map(_ => Redirect(routes.Tasks.index)).getOrElse(Ok(html.login(loginForm)))
+  }
+
+  def authenticate = Action {
+    implicit request =>
+      loginForm.bindFromRequest.fold(
+        formWithErrors => BadRequest(html.login(formWithErrors)),
+        user => Redirect(routes.Tasks.index).withSession(Security.username -> user._1)
+      )
+  }
+
+  def logout = Action {
+    Redirect(routes.Application.login).withNewSession.flashing(
+      "success" -> "You are now logged out."
+    )
   }
 }
