@@ -5,6 +5,31 @@
 
 @main("Todo list") {
 
+    <div class="accordion" id="accordion2">
+        <div class="accordion-group">
+            <div class="accordion-heading">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion2" href="#collapseOne">
+                    <h4>Add a new task</h4>
+                </a>
+            </div>
+            <div id="collapseOne" class="accordion-body collapse">
+                <div class="accordion-inner">
+                @form(routes.Application.newTask, 'class -> "form-horizontal") {
+
+                    @inputText(taskForm("label"))
+
+                    <div class="control-group">
+                        <div class="controls">
+                            <button type="submit" class="btn">Create</button>
+                        </div>
+                    </div>
+
+                }
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div class="row-fluid">
         <div class="span12">
             <h3>@tasks.size task(s)</h3>
@@ -38,18 +63,5 @@
         </div>
     }
 
-    <h3>Add a new task</h3>
-
-    @form(routes.Application.newTask, 'class -> "form-horizontal") {
-
-        @inputText(taskForm("label"))
-
-        <div class="control-group">
-            <div class="controls">
-                <button type="submit" class="btn">Create</button>
-            </div>
-        </div>
-
-    }
 
 }
