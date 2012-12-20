@@ -1,5 +1,5 @@
 function refreshTasks() {
-    jsRoutes.controllers.Application.tasks().ajax({
+    jsRoutes.controllers.Tasks.tasks().ajax({
         success: function (data) {
             updateNumberOfTasks(data.tasks.length)
             updateTasksTable(data.tasks)
@@ -13,7 +13,7 @@ function refreshTasks() {
 }
 
 function deleteTask(id) {
-    jsRoutes.controllers.Application.deleteTask().ajax({
+    jsRoutes.controllers.Tasks.deleteTask().ajax({
         contentType: "application/json; charset=utf-8",
         data: JSON.stringify({"id": id}),
         error: function (request, error) {
@@ -82,7 +82,7 @@ $(document).ready(function () {
             return
         }
 
-        jsRoutes.controllers.Application.addTask().ajax({
+        jsRoutes.controllers.Tasks.addTask().ajax({
             contentType: "application/json; charset=utf-8",
             data: JSON.stringify({"label": inputLabel}),
             error: function (request, error) {
