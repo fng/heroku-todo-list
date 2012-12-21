@@ -1,4 +1,4 @@
-@()
+@(tasks: Seq[Task])
 
 @import helper._
 @import views.helper.bootstrap2._
@@ -37,23 +37,15 @@
 
     <div class="row-fluid">
         <div class="span12">
-            <h3><span id="numberOfTasks">0</span> task(s) (AJAX)</h3>
+            <h3>@component.numberOfTasksLabel(tasks) task(s) (AJAX)</h3>
         </div>
     </div>
 
     <div class="row-fluid" id="tasksBlock">
         <div class="span6">
-            <table class="table table-condensed" id="tasksTable">
-                <thead>
-                    <tr>
-                        <th>Task</th>
-                        <th></th>
-                    </tr>
-                </thead>
-                <tbody>
-                </tbody>
-            </table>
+            @component.tasksTable(tasks)
         </div>
     </div>
+
 
 }

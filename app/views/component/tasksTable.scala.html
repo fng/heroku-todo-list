@@ -1,0 +1,19 @@
+@(tasks: Seq[Task])
+
+<table class="table table-condensed" id="tasksTable">
+    <thead>
+        <tr>
+            <th>Label</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @tasks.map { task =>
+        <tr>
+            <td>@task.label</td>
+            <td><a class="btn btn-mini btn-warning" onclick="deleteTask(@task.id)"><i class="icon-trash  icon-white"></i></a></td>
+        </tr>
+    }
+    </tbody>
+</table>
+

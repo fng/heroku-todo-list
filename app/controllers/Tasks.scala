@@ -8,20 +8,18 @@ object Tasks extends Controller with Secured {
 
   def index = IsAuthenticated {
     _ => implicit request =>
-      Ok(views.html.tasks())
+      Ok(views.html.tasks(Task.all()))
   }
 
   def tasks = IsAuthenticated {
     _ => implicit request =>
-      Ok(toJson(Map(
-        "tasks" -> Task.all().map {
-          task =>
-            toJson(Map(
-              "id" -> toJson(task.id),
-              "label" -> toJson(task.label)
-            ))
-        }
-      )))
+      {
+        val tasks = Task.all()
+        Ok(toJson(Map(
+          "tasksTable" -> toJson(views.html.component.tasksTable(tasks).body),
+          "numberOfTasksLabel" -> toJson(views.html.component.numberOfTasksLabel(tasks).body)
+        )))
+      }
   }
 
 

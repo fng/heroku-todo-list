@@ -5,11 +5,9 @@ import play.api.data._
 import play.api.data.Forms._
 
 import views._
+import models.Task
 
 object Application extends Controller with Secured{
-
-
-
 
 
   def javascriptRoutes = Action {
