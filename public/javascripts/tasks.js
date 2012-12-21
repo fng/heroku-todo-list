@@ -1,8 +1,7 @@
 function refreshTasks() {
     jsRoutes.controllers.Tasks.tasks().ajax({
         success: function (data) {
-            updateNumberOfTasksLabel(data.numberOfTasksLabel)
-            updateTasksTable(data.tasksTable)
+            updateFragments(data.fragments)
         },
         error: function (err) {
             alert("Error: " + err);
@@ -28,18 +27,8 @@ function deleteTask(id) {
 }
 
 
-function updateNumberOfTasksLabel(numberOfTasksLabel) {
-    $("#numberOfTasksLabel").replaceWith(numberOfTasksLabel)
-}
-
-function updateTasksTable(tasksTable) {
-    $("#tasksTable").replaceWith(tasksTable)
-}
-
-
 $(document).ready(function () {
 
-//    refreshTasks()
 
     $("#addTaskForm").submit(function (event) {
 
@@ -53,7 +42,6 @@ $(document).ready(function () {
             refreshTasks()
             form[0].reset()
             $("#addTaskError").empty()
-            $("#collapseTwo").collapse('hide')
         }
 
         event.preventDefault()

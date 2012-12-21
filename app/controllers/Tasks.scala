@@ -3,6 +3,8 @@ package controllers
 import play.api.libs.json.Json.toJson
 import play.api.mvc._
 import models.Task
+import play.api.templates.Html
+import play.api.libs.json.JsValue
 
 object Tasks extends Controller with Secured {
 
@@ -11,15 +13,27 @@ object Tasks extends Controller with Secured {
       Ok(views.html.tasks(Task.all()))
   }
 
+
+
+  case class HtmlFragment(id: String)(f: String => Html) {
+
+    lazy val asJson: JsValue = toJson(Map(
+      "id" -> toJson(id),
+      "html" -> toJson(f(id).body)
+    ))
+  }
+
+
   def tasks = IsAuthenticated {
-    _ => implicit request =>
-      {
-        val tasks = Task.all()
-        Ok(toJson(Map(
-          "tasksTable" -> toJson(views.html.component.tasksTable(tasks).body),
-          "numberOfTasksLabel" -> toJson(views.html.component.numberOfTasksLabel(tasks).body)
-        )))
-      }
+    _ => implicit request => {
+      val tasks = Task.all()
+      Ok(toJson(Map(
+        "fragments" -> Seq(
+          HtmlFragment(ID.tasks.tasksTable)(views.html.fragments.tasksTable(_, tasks)).asJson,
+          HtmlFragment(ID.tasks.numberOfTasksLabel)(views.html.fragments.numberOfTasksLabel(_, tasks)).asJson
+        )
+      )))
+    }
   }
 
 
