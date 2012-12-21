@@ -22,7 +22,7 @@ object Tasks extends Controller with Secured {
     )
   }
 
-  def addTask = IsAuthenticatedJson {
+  def addTask = IsAuthenticated(parse.json) {
     _ => implicit request =>
       (request.body \ "label").asOpt[String].map {
         label =>
@@ -39,7 +39,7 @@ object Tasks extends Controller with Secured {
   }
 
 
-  def deleteTask = IsAuthenticatedJson {
+  def deleteTask = IsAuthenticated(parse.json) {
     _ => implicit request =>
       (request.body \ "id").asOpt[Long].map {
         id =>

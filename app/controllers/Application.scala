@@ -6,6 +6,7 @@ import play.api.data.Forms._
 
 import views._
 import models.Task
+import java.util.UUID
 
 object Application extends Controller with Secured{
 
@@ -46,7 +47,7 @@ object Application extends Controller with Secured{
     implicit request =>
       loginForm.bindFromRequest.fold(
         formWithErrors => BadRequest(html.login(formWithErrors)),
-        user => Redirect(routes.Tasks.index).withSession(Security.username -> user._1)
+        user => Redirect(routes.Tasks.index).withSession(Security.username -> user._1, Secured.sessionId -> UUID.randomUUID().toString)
       )
   }
 
