@@ -11,9 +11,11 @@ POST    /login                      controllers.Application.authenticate
 GET     /logout                     controllers.Application.logout
 
 # Tasks
-GET     /tasks                      controllers.Tasks.tasks
 POST    /tasks                      controllers.Tasks.addTask
 DELETE  /tasks                      controllers.Tasks.deleteTask
+
+# Events
+GET  /events                        controllers.Events.events
 
 #Java script routes
 GET     /assets/javascripts/routes  controllers.Application.javascriptRoutes

@@ -1,16 +1,3 @@
-function refreshTasks() {
-    jsRoutes.controllers.Tasks.tasks().ajax({
-        success: function (data) {
-            updateFragments(data.fragments)
-        },
-        error: function (err) {
-            alert("Error: " + err);
-        }
-
-    });
-
-}
-
 function deleteTask(id) {
     jsRoutes.controllers.Tasks.deleteTask().ajax({
         contentType: "application/json; charset=utf-8",
@@ -19,7 +6,6 @@ function deleteTask(id) {
             alert("Error: " + error);
         },
         success: function (request) {
-            refreshTasks()
         }
 
     });
@@ -39,7 +25,6 @@ $(document).ready(function () {
 
         function onSuccess() {
             form.find("input").removeAttr("disabled")
-            refreshTasks()
             form[0].reset()
             $("#addTaskError").empty()
         }

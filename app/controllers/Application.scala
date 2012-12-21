@@ -15,9 +15,9 @@ object Application extends Controller with Secured{
       import play.api.Routes
       Ok(
         Routes.javascriptRouter("jsRoutes")(
-          routes.javascript.Tasks.tasks,
           routes.javascript.Tasks.addTask,
-          routes.javascript.Tasks.deleteTask
+          routes.javascript.Tasks.deleteTask,
+          routes.javascript.Events.events
         )
       ).as("text/javascript")
   }

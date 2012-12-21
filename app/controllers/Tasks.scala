@@ -3,8 +3,6 @@ package controllers
 import play.api.libs.json.Json.toJson
 import play.api.mvc._
 import models.Task
-import play.api.templates.Html
-import play.api.libs.json.JsValue
 
 object Tasks extends Controller with Secured {
 
@@ -15,27 +13,14 @@ object Tasks extends Controller with Secured {
 
 
 
-  case class HtmlFragment(id: String)(f: String => Html) {
 
-    lazy val asJson: JsValue = toJson(Map(
-      "id" -> toJson(id),
-      "html" -> toJson(f(id).body)
-    ))
+  def buildTasksFragmentContainer: HtmlFragmentContainer = {
+    val tasks = Task.all()
+    HtmlFragmentContainer(
+      HtmlFragment(ID.tasks.tasksTable)(views.html.fragments.tasksTable(_, tasks)),
+      HtmlFragment(ID.tasks.numberOfTasksLabel)(views.html.fragments.numberOfTasksLabel(_, tasks))
+    )
   }
-
-
-  def tasks = IsAuthenticated {
-    _ => implicit request => {
-      val tasks = Task.all()
-      Ok(toJson(Map(
-        "fragments" -> Seq(
-          HtmlFragment(ID.tasks.tasksTable)(views.html.fragments.tasksTable(_, tasks)).asJson,
-          HtmlFragment(ID.tasks.numberOfTasksLabel)(views.html.fragments.numberOfTasksLabel(_, tasks)).asJson
-        )
-      )))
-    }
-  }
-
 
   def addTask = IsAuthenticatedJson {
     _ => implicit request =>
@@ -45,6 +30,7 @@ object Tasks extends Controller with Secured {
             BadRequest("Label is required!")
           } else {
             Task.create(label)
+            Events.queue.add(buildTasksFragmentContainer)
             Ok("addTaskJson with label: " + label)
           }
       }.getOrElse {
@@ -58,6 +44,7 @@ object Tasks extends Controller with Secured {
       (request.body \ "id").asOpt[Long].map {
         id =>
           Task.delete(id)
+          Events.queue.add(buildTasksFragmentContainer)
           Ok("deleted Task with id:" + id)
       }.getOrElse {
         BadRequest("Missing parameter [id]")
